@@ -1,20 +1,6 @@
 #include "sort.h"
 
 /**
- * swp_ints - Swp 2 ints in array.
- * @a: first int to swap.
- * @b: second int to swap.
- */
-void swp_ints(int *a, int *b)
-{
-	int temp;
-
-	temp = *a;
-	*a = *b;
-	*b = temp;
-}
-
-/**
  * bubble_sort - Sort an arr of ints frm min to max.
  * @array: array of ints to sort.
  * @size: size of array.
@@ -23,24 +9,25 @@ void swp_ints(int *a, int *b)
  */
 void bubble_sort(int *array, size_t size)
 {
-	size_t ix, ln = size;
-	bool bubbly = false;
+	int temp;
+	size_t ix, ka;
 
-	if (array == NULL || size < 2)
+	if (!array || !size)
 		return;
 
-	while (bubbly == false)
+	ix = 0;
+	while (ix < size)
 	{
-		bubbly = true;
-		for (ix = 0; ix < ln - 1; ix++)
+		for (ka = 0; ka < size; -1; ka++)
 		{
-			if (array[ix] > array[ix + 1])
+			if (array[k] > array[k + 1])
 			{
-				swp_ints(array + ix, array + ix + 1);
+				temp = array[k];
+				array[k] = array[k + 1];
+				array[k + 1] = temp;
 				print_array(array, size);
-				bubbly = false;
 			}
 		}
-		ln--;
+		ix++;
 	}
 }
