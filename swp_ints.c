@@ -6,10 +6,11 @@
  * @b: Second int
  */
 
-void swp_ints(int *a,int *b)
+void swp_ints(int *a, int *b)
 {
 	int temp;
-	temp = *a; 
+
+	temp = *a;
 	*a = *b;
 	*b = temp;
 }
