@@ -31,7 +31,7 @@ typedef struct listint_s
 } listint_t;
 
 /* swapping helper*/
-void swap_ints(int *a, int *b);
+void swp_ints(int *a, int *b);
 
 /*Printing helper */
 void print_array(const int *array, size_t size);
