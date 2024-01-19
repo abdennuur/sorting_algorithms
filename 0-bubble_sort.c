@@ -18,13 +18,13 @@ void bubble_sort(int *array, size_t size)
 	ix = 0;
 	while (ix < size)
 	{
-		for (ka = 0; ka < size; -1; ka++)
+		for (ka = 0; ka < size -1; ka++)
 		{
-			if (array[k] > array[k + 1])
+			if (array[ka] > array[ka + 1])
 			{
-				temp = array[k];
-				array[k] = array[k + 1];
-				array[k + 1] = temp;
+				temp = array[ka];
+				array[ka] = array[ka + 1];
+				array[ka + 1] = temp;
 				print_array(array, size);
 			}
 		}
